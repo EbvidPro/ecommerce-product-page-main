@@ -114,3 +114,10 @@ document.querySelector(".delete-item").addEventListener("click", (e) => {
     document.querySelector(".quantity").style.display = "none";
 
 })
+
+// //Image Modal
+// document.querySelector(".currentImage").addEventListener("click", imageModal());
+
+// function imageModal() {
+
+// }
