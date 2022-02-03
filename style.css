@@ -420,7 +420,7 @@ img:hover {
     display: none;
   }
   .productInformation {
-    padding-right: 0;
+    padding-right: 20px;
   }
   .control-section {
     text-align: center;
