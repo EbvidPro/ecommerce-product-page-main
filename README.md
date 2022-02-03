@@ -15,8 +15,9 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 - [Author](#author)
 
 ## Overview
-An E-commerce product page 
-Your users can:
+An E-commerce product page
+
+Users can:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
