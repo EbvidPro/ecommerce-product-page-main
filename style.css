@@ -234,6 +234,7 @@ img:hover {
 }
 .productInformation {
   padding: 50px 20px;
+  padding-right: 5rem;
 }
 .infoTitle {
   color: var(--orange-color);
@@ -416,7 +417,9 @@ img:hover {
   .thumbnails {
     display: none;
   }
-
+  .productInformation {
+    padding-right: 0;
+  }
   .control-section {
     text-align: center;
     width: 100%;
