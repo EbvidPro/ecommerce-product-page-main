@@ -235,7 +235,7 @@ img:hover {
   border: 3px solid var(--orange-color);
 }
 .productInformation {
-  padding: 50px 20px;
+  padding: 5rem 20px;
   padding-right: 5rem;
 }
 .infoTitle {
