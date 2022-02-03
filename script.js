@@ -99,6 +99,8 @@ document.querySelector(".add-cart-btn").addEventListener("click", () => {
     let cartQt = document.querySelector(".product-qts");
     cartQt.innerHTML = Qt;
 
+    document.querySelector(".quantity").style.display = "block";
+
     let totalPrice = document.querySelector(".discount-value").innerHTML;
     let totalPriceCart = document.querySelector(".total-prize");
     totalPriceCart.innerHTML = totalPrice;
@@ -109,5 +111,6 @@ document.querySelector(".delete-item").addEventListener("click", (e) => {
     let deleteButton = e.target;
     deleteButton.parentElement.parentElement.remove();
     document.querySelector(".empty").style.display = 'block';
+    document.querySelector(".quantity").style.display = "none";
 
 })

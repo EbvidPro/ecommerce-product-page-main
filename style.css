@@ -86,6 +86,18 @@ img:hover {
   justify-content: flex-end;
   align-items: center;
 }
+.quantity {
+  display: none;
+  position: absolute;
+  background-color: var(--orange-color);
+  border-radius: 50%;
+  font-size: 8px;
+  font-weight: bolder;
+  text-align: center;
+  width: 1%;
+  height: 1%;
+  z-index: 1000;
+}
 .cart-img {
   cursor: pointer;
 }
@@ -297,12 +309,18 @@ img:hover {
   width: 20%;
   height: 100%;
   display: flex;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   color: var(--orange-color);
   font-size: 20px;
   font-weight: 700;
+}
+.add:hover,
+.sub:hover {
+  color: white;
+  background-color: var(--orange-color);
 }
 .value-in-cart {
   width: 60%;
@@ -388,6 +406,10 @@ img:hover {
   }
   .nav ul {
     display: none;
+  }
+  .quantity {
+    width: 2%;
+    height: 2%;
   }
   .cartBasket {
     display: none;
