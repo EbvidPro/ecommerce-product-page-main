@@ -1,12 +1,4 @@
-// if(document.readyState == 'loading') {
-//     document.addEventListener("DOMContentloaded", ready)
-// } else {
-//     ready()
-// }
 
-// function ready() {
-
-// }
 let mainImage = document.querySelector('.presentImage');
 let imageSRC = mainImage.getAttribute("src");
 function changeImage1() {
@@ -115,9 +107,52 @@ document.querySelector(".delete-item").addEventListener("click", (e) => {
 
 })
 
-// //Image Modal
-// document.querySelector(".currentImage").addEventListener("click", imageModal());
 
-// function imageModal() {
 
-// }
+
+//Image Modal Section 
+let modalImage = document.querySelector('.modalPresentImage');
+let imageModalSRC = modalImage.getAttribute("src");
+function changeImage5() {
+    modalImage.setAttribute("src", "images/image-product-1.jpg");
+}
+function changeImage6() {
+    modalImage.setAttribute("src", "images/image-product-2.jpg");
+}
+function changeImage7() {
+    modalImage.setAttribute("src", "images/image-product-3.jpg");
+}
+function changeImage8() {
+    modalImage.setAttribute("src", "images/image-product-4.jpg");
+}
+
+//Next and Previous Function 
+document.querySelector(".modalNext").addEventListener("click", () => {
+    let nextModalImage = modalImage.getAttribute("src");
+    if (nextModalImage == "images/image-product-1.jpg") {
+        modalImage.setAttribute("src", "images/image-product-2.jpg")
+    } else if (nextModalImage == "images/image-product-2.jpg") {
+        modalImage.setAttribute("src", "images/image-product-3.jpg")
+    } else if (nextModalImage == "images/image-product-3.jpg") {
+        modalImage.setAttribute("src", "images/image-product-4.jpg")
+    }
+})
+
+document.querySelector(".modalPrevious").addEventListener("click", () => {
+    let nextModalImage = modalImage.getAttribute("src");
+    if (nextModalImage == "images/image-product-2.jpg") {
+        modalImage.setAttribute("src", "images/image-product-1.jpg")
+    } else if (nextModalImage == "images/image-product-3.jpg") {
+        modalImage.setAttribute("src", "images/image-product-2.jpg")
+    } else if (nextModalImage == "images/image-product-4.jpg") {
+        modalImage.setAttribute("src", "images/image-product-3.jpg")
+    }
+})
+
+document.querySelector(".currentImage").addEventListener("click", () => {
+    document.querySelector(".imageModal").style.display = "block";
+});
+
+document.querySelector(".closeModal").addEventListener("click", () => {
+    document.querySelector('.imageModal').style.display = "none";
+})

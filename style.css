@@ -214,6 +214,57 @@ img:hover {
   cursor: pointer;
   border: 2px solid var(--orange-color);
 }
+.imageModal {
+  display: none;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 60px;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.imageModal .currentImage img {
+  width: 40%;
+}
+.imageModal .thumbnails {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  text-align: center;
+  grid-gap: none;
+}
+.imageModal .thumbnails img {
+  width: 70%;
+}
+.modalPrevious,
+.modalNext {
+  padding: 10px;
+  top: 47%;
+  background: white;
+  border-radius: 50% !important;
+  position: absolute;
+  width: auto !important;
+  height: auto;
+}
+.modalPrevious {
+  left: 23rem;
+}
+.modalNext {
+  right: 23rem;
+}
+.closeDiv img {
+  padding: 20px;
+  cursor: pointer;
+}
+.closeDiv img:hover {
+  background-color: #000;
+}
 .main-section {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -381,6 +432,29 @@ img:hover {
     color: #000;
     font-weight: 700;
   }
+  .imageModal {
+    padding: 50px;
+  }
+  .imageModal .currentImage img {
+    width: 50%;
+  }
+  .imageModal .thumbnails {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .imageModal .thumbnails img {
+    width: 70%;
+  }
+  .modalPrevious,
+  .modalNext {
+    top: 40%;
+  }
+  .modalPrevious {
+    left: 15rem;
+  }
+  .modalNext {
+    right: 15rem;
+  }
   .main-section {
     grid-template-columns: 45% auto;
     grid-gap: 2rem;
@@ -429,6 +503,26 @@ img:hover {
   }
   .empty {
     padding: 2rem;
+  }
+  .imageModal {
+    padding: 7rem 20px;
+  }
+  .imageModal .currentImage img {
+    border-radius: 20px;
+    width: 80%;
+  }
+  .imageModal .thumbnails {
+    display: none;
+  }
+  .modalPrevious,
+  .modalNext {
+    top: 55%;
+  }
+  .modalPrevious {
+    left: 7rem;
+  }
+  .modalNext {
+    right: 7rem;
   }
   .main-section {
     display: grid;
