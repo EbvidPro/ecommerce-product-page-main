@@ -149,7 +149,7 @@ document.querySelector(".modalPrevious").addEventListener("click", () => {
     }
 })
 
-document.querySelector(".currentImage").addEventListener("click", () => {
+document.querySelector(".presentImage").addEventListener("click", () => {
     document.querySelector(".imageModal").style.display = "block";
 });
 
