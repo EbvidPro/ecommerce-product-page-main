@@ -1,6 +1,6 @@
 # Frontend Mentor - E-commerce product page solution
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).
 
 ## Table of contents
 
@@ -15,6 +15,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 - [Author](#author)
 
 ## Overview
+
 An E-commerce product page
 
 Users can:
@@ -32,8 +33,7 @@ Users can:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live link](https://e-commerce-frontendmentor.netlify.app/)
 
 ### Built with
 
@@ -41,6 +41,8 @@ Users can:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- If else statement
+- DOM manipulation
 
 ### Continued development
 
@@ -52,6 +54,5 @@ I want to try on creating a full functional E-commerce website
 
 ## Author
 
-- Website - [OLuwatobi David](https://ebvidpro.github.io/Oluwatobi-David/)
+- Website - [OLuwatobi David](https://oluwatobidavid.netlify.app/)
 - Twitter - [@oluwatobiDave](https://www.twitter.com/oluwatobidave)
-
