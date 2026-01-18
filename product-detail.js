@@ -30,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Setup image navigation
   setupImageNavigation();
-  
-  // Setup modal
-  setupModal();
 });
 
 function renderBreadcrumbs(product) {
@@ -406,73 +403,3 @@ function setupImageNavigation() {
   }
 }
 
-function setupModal() {
-  const mainImage = document.querySelector('.presentImage');
-  const modal = document.querySelector('.imageModal');
-  const closeModal = document.querySelector('.closeModal');
-  const modalImage = document.querySelector('.modalPresentImage');
-  const modalThumbnails = document.getElementById('modalThumbnails');
-  const modalNext = document.querySelector('.modalNext');
-  const modalPrev = document.querySelector('.modalPrevious');
-  
-  if (mainImage && modal) {
-    mainImage.addEventListener('click', () => {
-      if (currentProduct) {
-        modalImage.src = currentProduct.images[currentImageIndex];
-        modal.style.display = 'block';
-        
-        // Render modal thumbnails
-        if (modalThumbnails) {
-          modalThumbnails.innerHTML = currentProduct.thumbnails.map((thumb, index) => `
-            <img
-              src="${thumb}"
-              alt="thumbnail ${index + 1}"
-              onclick="changeModalImage(${index})"
-            />
-          `).join('');
-        }
-      }
-    });
-  }
-  
-  if (closeModal && modal) {
-    closeModal.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-  }
-  
-  if (modalNext && currentProduct) {
-    modalNext.addEventListener('click', () => {
-      currentImageIndex = (currentImageIndex + 1) % currentProduct.images.length;
-      if (modalImage) {
-        modalImage.src = currentProduct.images[currentImageIndex];
-      }
-    });
-  }
-  
-  if (modalPrev && currentProduct) {
-    modalPrev.addEventListener('click', () => {
-      currentImageIndex = (currentImageIndex - 1 + currentProduct.images.length) % currentProduct.images.length;
-      if (modalImage) {
-        modalImage.src = currentProduct.images[currentImageIndex];
-      }
-    });
-  }
-  
-  // Close modal on background click
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  }
-}
-
-function changeModalImage(index) {
-  const modalImage = document.querySelector('.modalPresentImage');
-  if (modalImage && currentProduct) {
-    currentImageIndex = index;
-    modalImage.src = currentProduct.images[index];
-  }
-}
